@@ -89,7 +89,7 @@ var rsidSelectionHandlers = Alexa.CreateStateHandler(states.STATE_RSID_SELECTION
 
             //Tell use they can now ask for data
             var speechOutput = this.t("REPORT_SUITE_SELECTED", matchingReportSuite.name);
-            var reprompt = this.t("REPORT_SUITE_SELECTED_REPROMPT";
+            var reprompt = this.t("REPORT_SUITE_SELECTED_REPROMPT");
             this.emit(':ask', speechOutput, reprompt);
         }else{
             //We were unable to match the spoken word to a report suite
