@@ -113,7 +113,7 @@ var rsidSelectionHandlers = Alexa.CreateStateHandler(states.STATE_RSID_SELECTION
             //We found a match!
 
             //Enter the query state
-            //this.handler.state = states.STATE_QUERY;
+            this.handler.state = states.STATE_QUERY;
 
             //Store the selected report suite in session
             this.attributes['selectedReportSuite'] = matchingReportSuite;
