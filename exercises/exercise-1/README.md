@@ -10,6 +10,7 @@ There are several ways to interact with Alexa:
 
 1. ##### Using the Browser
   * Using the `Test` tab on the page you set up the Amazon Alexa Skill.
+  * Or via https://echosim.io/ (requires a microphone)
 
 2. ##### Using a Mobile app
     * iOS  - Install [Reverb for Amazon Alexa](https://itunes.apple.com/bt/app/reverb.ai/id1144695621?mt=8)
