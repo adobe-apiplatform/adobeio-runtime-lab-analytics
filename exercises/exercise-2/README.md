@@ -1,12 +1,14 @@
 ## Exercise 2
 
+~ `15 minutes`
+
 In this exercise we will configure Alexa to let the user select a report suite using the Analytics API.
 
 ### Step 1
-Using the browser open exercises/exercise-2/alexa-skill.js in your github fork and click the pencil icon to edit it. If you are using the CLI open this file in a text editor.
+Using the browser open `exercises/exercise-2/alexa-skill.js` in your github fork and click the pencil icon to edit it. If you are using the CLI open this file in a text editor.
 
-### Step 2 
-Replace the LaunchRequest function inside of newSessionHandlers with the implementation below. This code will make a call to the Analytics API to get all available report suites and list them back to the user.
+### Step 2
+Replace the `LaunchRequest` function inside of `newSessionHandlers` with the implementation below. This code will make a call to the Analytics API to get all available report suites and list them back to the user.
 
 ```javascript
     'LaunchRequest': function () {
@@ -33,7 +35,7 @@ Replace the LaunchRequest function inside of newSessionHandlers with the impleme
 ```
 
 ### Step 3
-Add function to handle get report suites call
+Add function to handle get report suites call:
 
 ```javascript
 /**
@@ -62,7 +64,7 @@ function getReportSuites(token, reportSuitesResponseCallback) {
 ```
 
 ### Step 4
-Add rsidSelectionHandlers to handle rsid selection state requests
+Add `rsidSelectionHandlers` to handle rsid selection state requests:
 
 ```javascript
 // Create a new handler for the report suite selection state
@@ -133,12 +135,12 @@ var rsidSelectionHandlers = Alexa.CreateStateHandler(states.STATE_RSID_SELECTION
         this.emit(':tell', this.t("STOP_MESSAGE"));
     }
 });
-```    
-    
+```
+
 ### Step 5
 Add function to match spoken word to report suite
 
-```javascript    
+```javascript
 /**
  * Tries to match a report suite with the spoken name
  */
@@ -193,10 +195,30 @@ If you are editing the code in the browser commit the changes to alexa-skill.js,
 ### Step 9
  Change the location manifest.yaml to point to
 
-```
-exercises/exercise-2/alexa-skill.js
-```
+ ```yaml
+     location: exercises/exercise-2/alexa-skill.js
+ ```
 
 ### Step 10
 Commit changes back to github, either using the browser or the git CLI.
 
+### Step 11
+
+Invoke your skill.
+
+* `You:` _"Alexa, ask Adobe Analytics"_
+* `Alexa:` "_Welcome to Adobe Analytics.. Which report suite would you like to use? Summit Demo 2017, Template Report Suite_"
+
+* `You:` _"Summit"_
+* `Alexa`: _"Ok, using the Summit Demo 2017 report suite. You will now need to program me to handle a report request."_
+
+#### Tip
+ You can view the logs of the action that has executed by opening the browser to your action URL `https://runtime-preview.adobe.io/github.com/...` followed by `/logs`. For example if your GitHub account is named `adobeio` then the URL showing the logs is:
+`https://runtime-preview.adobe.io/github.com/adobeio/adobeio-runtime-lab-analytics/master/alexa-skill/adobe-analytics-skill/logs`
+
+You should then see the logs:
+```
+-  stdout: ALEXA Event IntentRequest!
+-  stdout: ReportSuiteSelectionIntent Started
+-  stdout: Found report suite match
+```

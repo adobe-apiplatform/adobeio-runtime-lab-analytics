@@ -1,0 +1,15 @@
+ReportSuiteSelectionIntent {bladerunner|ReportSuite}
+ReportSuiteSelectionIntent {bladerunner lab|ReportSuite}
+ReportSuiteSelectionIntent {Neiman POC|ReportSuite}
+ReportSuiteSelectionIntent {Tech Summit|ReportSuite}
+ReportSuiteSelectionIntent {QoS|ReportSuite}
+ReportSuiteSelectionIntent {QA Showcase|ReportSuite}
+
+OneshotReportIntent how many {Metric} {Duration}
+OneshotReportIntent what's the {Metric} {Duration}
+
+PageViewsTodayIntent how many page views today
+
+AMAZON.StopIntent stop
+
+ThankYouIntent Thank you

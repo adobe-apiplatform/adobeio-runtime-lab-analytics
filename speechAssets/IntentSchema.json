@@ -1,0 +1,41 @@
+{
+  "intents": [
+    {
+      "intent": "OneshotReportIntent",
+      "slots": [
+        {
+          "name": "Metric",
+          "type": "LIST_OF_METRICS"
+        },
+        {
+          "name": "Duration",
+          "type": "LIST_OF_DURATIONS"
+        }
+      ]
+    },
+    {
+      "intent": "ReportSuiteSelectionIntent",
+      "slots": [
+        {
+          "name": "ReportSuite",
+          "type": "AMAZON.LITERAL"
+        }
+      ]
+    },
+    {
+      "intent": "PageViewsTodayIntent"
+    },
+    {
+      "intent": "ThankYouIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}

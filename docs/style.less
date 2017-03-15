@@ -1,0 +1,235 @@
+/*
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+// style the background color of the tree view
+.tree-view {
+  // background-color: whitesmoke;
+}
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+  // color: white;
+  // background-color: hsl(180, 24%, 12%);
+}
+
+// style UI elements inside atom-text-editor
+atom-text-editor .cursor {
+  // border-color: red;
+}
+
+
+
+/*
+ * markdown-preview-enhanced custom style
+ */
+.markdown-preview-enhanced-custom {
+
+  font-family: "MerriweatherLight";
+  background-color: white;
+
+  h1, h2, h3, h4, h5,h6 {
+    font-family: "Open Sans";
+    page-break-after: avoid;
+    border-bottom: none;
+  }
+
+  h1 {
+    border-bottom: 2pt solid #CCC;
+    padding-bottom: 0.25em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  h1 {
+    font-size: 1.9em;
+    margin: 0.67em 0;
+  }
+
+  h2 {
+    font-size: 1.25em;
+    margin: 0.75em 0;
+  }
+
+  h3 {
+    font-size: 1.07em;
+    margin: 0.83em 0;
+  }
+
+  h4, p, blockquote, ul, fieldset, form, ol, dl, dir, menu {
+    margin: 1.02em 0;
+  }
+
+  h5 {
+    font-size: 0.95em;
+    margin: 1.5em 0;
+  }
+
+  h6 {
+    font-size: .75em;
+    margin: 1.67em 0;
+  }
+
+  h1, h2, h3, h4, h5, h6, b, strong {
+    font-weight: bold;
+  }
+
+  a {
+    // text-decoration: none;
+    color: #000;
+  }
+  a:link, a:visited {
+    // text-decoration:underline;
+  }
+
+  p {
+      font-family: "MerriweatherLight";
+      font-size: 10.41pt;
+      color: black;
+      margin-bottom: 1em;
+  }
+
+  li {
+    display: list-item;
+    margin: 0.5em 0;
+  }
+
+  blockquote {
+    margin-left: 20px;
+    margin-top: 20px;
+    p {
+      font-family: "MerriweatherItalic";
+      font-style: italic;
+      font-size: 1em;
+      code {
+        font-size:1em;
+      }
+    }
+  }
+
+  code {
+    // background: transparent;
+    font-family: "Inconsolata";
+    font-size: 1.2em;
+  }
+
+  pre {
+    font-family: "Inconsolata";
+    background: transparent;
+    font-size: 10.41pt;
+    // border-left:2px solid rgb(214, 214, 214);
+    position: relative;
+    border: none;
+    border-left: 1pt solid rgb(214, 214, 214);
+    padding: 0.5rem 0 0.5rem 1rem;
+    line-height: 1.4;
+    &::before {
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+      transform: translateY(-50%) rotate(45deg);
+      left: 3px;
+      border-width: 2px 2px 0 0;
+      border-style: solid;
+    }
+  }
+
+  table {
+    display: table;
+  }
+
+  tr {
+    display: table-row;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tbody {
+    display: table-row-group;
+  }
+
+  tfoot {
+    display: table-footer-group;
+  }
+
+  col {
+    display: table-column;
+  }
+
+  colgroup {
+    display: table-column-group;
+  }
+
+  td, th {
+    display: table-cell;
+  }
+
+  caption {
+    display: table-caption;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 2px;
+    width: 100%;
+    margin: 1rem 0 0.5rem 0;
+    color: black;
+    font-size: 0.9em;
+
+    code {
+      font-size: 1em;
+    }
+
+    tr:nth-child(2n) {
+      background-color: #f8f8f8;
+    }
+
+    tr:last-child td, tr:last-child th {
+      border-bottom-width: 1.5pt;
+      border-bottom-color: #666;
+    }
+  }
+
+  @media print {
+
+
+  }
+
+  // custom phantomjs png/jpeg export style
+  &.phantomjs-image {
+
+  }
+
+  //custom phantomjs pdf export style
+  &.phantomjs-pdf {
+
+  }
+
+  // custom presentation style
+  .preview-slides .slide,
+  &[data-presentation-mode] {
+    // eg
+    // background-color: #000;
+  }
+}
+
+// please don't modify the .markdown-preview-enhanced section below
+.markdown-preview-enhanced {
+  .markdown-preview-enhanced-custom() !important;
+}

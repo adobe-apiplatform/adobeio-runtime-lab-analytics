@@ -27,7 +27,7 @@ var API_KEY = '';
 var ANALYTICS_COMPANY = '';
 /* provided */
 
-// Analytics SDK        
+// Analytics SDK
 var analytics = require("adobe-analytics")
 
 //Supported Metrics
@@ -57,7 +57,7 @@ var languageStrings = {
             "REPORT_SUITE_SELECTED_REPROMPT" : "Currently, I can tell you information about the following metrics: %s. For example, you can ask me, how many page views this month?",
             "UNKNOWN_COMMAND_RSID_SELECTION" : "I'm sorry, I could not find that report suite. Which report suite would you like to use? %s.",
             "UNKNOWN_COMMAND_REPROMPT_RSID_SELECTION" : "Which report suite would you like to use? %s.",
-            "UNKNOWN_COMMAND_QUERY" : "I'm sorry, I did not understand that request?",            
+            "UNKNOWN_COMMAND_QUERY" : "I'm sorry, I did not understand that request?",
             "UNKNOWN_COMMAND_REPROMPT_QUERY" : "Currently, I can tell you information about the following metrics: %s. For example, you can ask me, how many page views this month?",
             "QUERY_REPROMPT" : "You can ask for another report or say stop to end the session.",
             "API_ERROR" : "Sorry, Adobe Analytics experienced an error. Please try again later.",
