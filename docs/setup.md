@@ -31,12 +31,12 @@ This section goes through the steps that are needed to create an action in Adobe
 
    Field        |    Value
    ------------ | -------------
-   Payload URL  | `https://runtime-preview.adobe.io/github/webhook?api_key=...&analytics_company=...`
+   Payload URL  | `https://runtime-preview.adobe.io/github/webhook?analytics_api_key=...&analytics_company=...`
    Content type | _application/json_
    Secret       | _( provided during the lab )_
    Which events would you like to trigger this webhook? | _Just the push event._
 
-   > `api_key`, `analytics_company`, and `Secret` are provided during the lab.
+   > `analytics_api_key`, `analytics_company`, and `Secret` are provided during the lab.
 
    When done, click the `Add webhook` button. Once the webhook is saved, you should see it listed.
 
