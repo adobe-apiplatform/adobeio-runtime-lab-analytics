@@ -81,6 +81,9 @@ var newSessionHandlers = {
 
         //Store local scope
         var that = this;
+        
+        console.log("Getting the list of report suites for the user:");
+        console.log(this.event.session.user.accessToken);
 
         //Get a list of report suites
         getReportSuites(this.event.session.user.accessToken, function reportSuitesResponseCallback(err, reportSuites) {
@@ -318,12 +321,18 @@ function getReportSuites(token, reportSuitesResponseCallback) {
     var analytics = require('adobe-analytics');
 
     analytics.config(headers).then(function (api) {
-        api.collections.findAll({expansion: "name", limit: "50"}).then(function (result) {
+        console.log("Finding the top 50 report suites");
+        api.collections.findAll({expansion: "name", limit: "50"})
+          .then(function (result) {
             var data = JSON.parse(result["data"]);
             var reportSuites = data.content;
             console.log(JSON.stringify(reportSuites));
             reportSuitesResponseCallback(null, reportSuites);
         })
+        .catch( function(err) {
+            console.log("Could not get the list of report suites");
+            console.error(err);
+        });
     })
 }
 
@@ -473,6 +482,7 @@ function getAllMetricsText() {
 
 var main = function (event) {
     console.log('ALEXA Event', event.request.type + '!');
+    console.log(event);
 
     API_KEY = event.analytics_api_key;
     /* default parameter for the action */
